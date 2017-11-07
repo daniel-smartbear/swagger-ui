@@ -10,6 +10,7 @@ import auth from "core/plugins/auth"
 import util from "core/plugins/util"
 import SplitPaneModePlugin from "core/plugins/split-pane-mode"
 import downloadUrlPlugin from "core/plugins/download-url"
+import configsPlugin from "plugins/configs"
 import deepLinkingPlugin from "core/plugins/deep-linking"
 
 import App from "core/components/app"
@@ -54,6 +55,7 @@ import ArrayModel from "core/components/array-model"
 import PrimitiveModel from "core/components/primitive-model"
 import TryItOutButton from "core/components/try-it-out-button"
 import VersionStamp from "core/components/version-stamp"
+import RequestUrl from "core/components/request-url"
 
 import Markdown from "core/components/providers/markdown"
 
@@ -109,7 +111,8 @@ export default function() {
       TryItOutButton,
       Markdown,
       BaseLayout,
-      VersionStamp
+      VersionStamp,
+      RequestUrl
     }
   }
 
@@ -122,6 +125,7 @@ export default function() {
   }
 
   return [
+    configsPlugin,
     util,
     logs,
     view,
